@@ -34,21 +34,20 @@ async function messageCreate(client, message) {
     if (config.APIkey != "") {
         Data["APIkey"] = config.APIkey
     }
-    axios
-        .post("http://150.117.110.118:10150/", Data)
-        .then(res => {
-            if (res.data["state"] === "Success") {
-                console.log(res.data)
-                if (res.data["response"] != "All URL inspections passed" && res.data["response"] != "No URL found") {
-                    message.reply(await pluginLoader.embed("文本中含有危險網址"))
-                    message.delete()
-                }
-            } else {
-                pluginLoader.log(`Error | urlChecker >> ${res.data["response"]}`)
+    try {
+        let res = await axios.post("http://150.117.110.118:10150/", Data)
+        if (res.data["state"] === "Success") {
+            console.log(res.data)
+            if (res.data["response"] != "All URL inspections passed" && res.data["response"] != "No URL found") {
+                message.reply(await pluginLoader.embed("文本中含有危險網址"))
+                message.delete()
             }
-        }).catch(err => {
-            pluginLoader.log("Error | urlChecker >> " + err)
-        })
+        } else {
+            pluginLoader.log(`Error | urlChecker >> ${res.data["response"]}`)
+        }
+    } catch (error) {
+        pluginLoader.log("Error | urlChecker >> " + err)
+    }
 }
 
 module.exports = {
