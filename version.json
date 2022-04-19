@@ -1,4 +1,10 @@
 [
+   {
+    "name":"1.0.1",
+    "note":"移除不必要的控制台輸出",
+    "Pre-Release":false,
+    "reclaimed":false
+  },
   {
     "name":"1.0.0",
     "note":"第一個發布的版本",
