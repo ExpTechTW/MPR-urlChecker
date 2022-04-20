@@ -1,6 +1,7 @@
 const Info = {
     "version": "1.0.1",
     "pluginLoader": ["1.X.X"],
+    "depends":["pluginLoader"],
     "name": "urlChecker",
     "author": "whes1015"
 }
