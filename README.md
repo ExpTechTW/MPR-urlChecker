@@ -1,9 +1,9 @@
-# 模板
+# MPR-urlChecker
 <img alt="Discord" src="https://img.shields.io/discord/926545182407688273">
 
 ------
 
-- 這是一個 ExpTech Github 模板
+- MPR 的 檢查網址安全性 插件
 
 ## 索引
 - [貢獻者](#貢獻者)
@@ -11,7 +11,7 @@
 - [合作](#合作)
 
 ## 貢獻者
-- whes1015 `文檔`
+- whes1015 `程式開發` `文檔`
 
 ------
 
