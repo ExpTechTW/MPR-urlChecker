@@ -1,4 +1,10 @@
 [
+  {
+    "name":"3.0.0",
+    "note":"兼容 pluginLoader 3.X.X",
+    "Pre-Release":false,
+    "reclaimed":false
+  },
    {
     "name":"2.0.0",
     "note":"兼容 pluginLoader 2.X.X",
