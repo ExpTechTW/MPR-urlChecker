@@ -46,7 +46,7 @@ async function messageCreate(client, message) {
             pluginLoader.log(`Error | urlChecker >> ${res.data["response"]}`)
         }
     } catch (error) {
-        pluginLoader.log("Error | urlChecker >> ERROR")
+        pluginLoader.log("Error | urlChecker >> " + error)
     }
 }
 
