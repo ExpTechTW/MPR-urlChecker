@@ -41,8 +41,7 @@ async function messageCreate(client, message) {
             if (res.data["response"] != "All URL inspections passed" && res.data["response"] != "No URL found") {
                 await message.reply(await pluginLoader.embed(":name_badge: 網址安全檢查失敗\n用戶: " + message.author.username + "\n原文: " + message.content, "#E60000"))
                 message.delete()
-            } else {
-                console.log(res.data)
+            } else if (res.data["response"] != "No URL found") {
                 message.react('✅')
             }
         } else if (res.data["response"] != "No URL found") {
